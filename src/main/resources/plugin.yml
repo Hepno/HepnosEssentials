@@ -1,0 +1,33 @@
+name: HepnosEssentials
+version: 1.0
+author: Hepno
+main: dev.hepno.hepnosessentials.HepnosEssentials
+api-version: 1.19
+commands:
+  heal:
+    description: Heals player to max health.
+    usage: /<command>
+  feed:
+    description: Feeds a player to max hunger
+    usage: /<command>
+  time:
+    description: Checks the time of the players current world, or changes the time.
+    usage: /<command>
+  day:
+    description: Sets the time to day in the players current world
+    usage: /<command>
+  noon:
+    description: Sets the time to noon in the players current world
+    usage: /<command>
+  sunset:
+    description: Sets the time to sunset in the players current world
+    usage: /<command>
+  night:
+    description: Sets the time to night in the players current world
+    usage: /<command>
+  midnight:
+    description: Sets the time to midnight0 in the players current world
+    usage: /<command>
+  sunrise:
+    description: Sets the time to sunrise in the players current world
+    usage: /<command>
