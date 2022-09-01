@@ -1,5 +1,5 @@
 # HepnosEssentials
-A free and open source Spigot plugin aimed at adding essential features necessary for almost every server. From command aliases, improved Chat formatting, and moderation, to Scoreboards, Tab lists, and World Managers, this plugins got it all.
+HepnosEssentials is a free and open source Spigot plugin aimed at adding essential features necessary for almost every server. From command aliases, improved Chat formatting, and moderation, to Scoreboards, Tab lists, and World Managers, this plugins got it all.
 
 **NOTE: This plugin is not finished and is still a work in progress.**
 
