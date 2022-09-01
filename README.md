@@ -25,3 +25,5 @@ HepnosEssentials is a free and open source Spigot plugin aimed at adding essenti
 - World Management
 - Anti Cheat
 - Configuration (Chat messages, enable/disable commands & features)
+
+**Download:** As the plugin is not anywhere near finished there is no download available (yet). Feel free to compile the plugin yourself if you'd like to try it.
