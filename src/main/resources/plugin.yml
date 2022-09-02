@@ -34,3 +34,9 @@ commands:
   weather:
     description: Change the weather
     usage: /<command>
+  sun:
+    description: Set the weather to clear
+    usage: /<command>
+  rain:
+    description: Set the weather to rain
+    usage: /<command>
