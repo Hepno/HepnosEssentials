@@ -26,6 +26,7 @@ HepnosEssentials is a free and open source Spigot plugin aimed at adding essenti
 
 **Change Logs:**
 1.1: Added Weather rework, fixed bugs that caused internal errors when specifying a player that doesnt exist & running a command in console
+
 1.2: Added /gamemode (/gmc, /gms, /gma, /gmsp as well), added /kill, added reworked Join & Leave messages
 
 **Download:** As the plugin is not anywhere near finished there is no download available (yet). Feel free to compile the plugin yourself if you'd like to try it.
