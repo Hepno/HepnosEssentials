@@ -2,17 +2,16 @@
 HepnosEssentials is a free and open source Spigot plugin aimed at adding essential features necessary for almost every server. From command aliases, improved Chat formatting, and moderation, to Scoreboards, Tab lists, and World Managers, this plugins got it all.
 
 **Currently Implemented features:**
-- Fully reworked /time command
-- /day, /night, etc commands to go along with the reworked /time
+- Fully reworked /time, /weather, & /gamemode command
+- /day, /night, /sun, /rain, /gmc, /gms etc to go along with the reworked commands
 - /heal Command
 - /feed Command
-- Weather command
+- /kill Command
+- /Reworked join messages
 
 **To Do List:**
 - /he help command
-- Reworked /gamemode command
 - Reworked /give command
-- Reworked /kill command
 - Reworked /tp command
 - Reworked Chat layout
 - Moderation tools (ban, tempban, mute, tempmute, kick, warn, etc)
@@ -24,5 +23,9 @@ HepnosEssentials is a free and open source Spigot plugin aimed at adding essenti
 - World Management
 - Anti Cheat
 - Configuration (Chat messages, enable/disable commands & features)
+
+**Change Logs:**
+1.1: Added Weather rework, fixed bugs that caused internal errors when specifying a player that doesnt exist & running a command in console
+1.2: Added /gamemode (/gmc, /gms, /gma, /gmsp as well), added /kill, added reworked Join & Leave messages
 
 **Download:** As the plugin is not anywhere near finished there is no download available (yet). Feel free to compile the plugin yourself if you'd like to try it.

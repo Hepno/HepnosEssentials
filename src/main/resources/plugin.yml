@@ -55,3 +55,6 @@ commands:
   gmsp:
     description: Sets a players gamemode to spectator
     usage: /<command> <player>
+  kill:
+    description: Kill yourself or another player
+    usage: /<command> <player>
