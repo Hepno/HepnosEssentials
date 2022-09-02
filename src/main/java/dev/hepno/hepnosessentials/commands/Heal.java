@@ -22,13 +22,10 @@ public class Heal implements CommandExecutor {
                 return true;
             }
             Player target = Bukkit.getPlayerExact(args[0]);
-            if (target instanceof Player) {
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&lHepnosEssentials &8» &7Healed &a" + target.getDisplayName() + " &7to full HP!"));
                 target.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&lHepnosEssentials &8» &a" + player.getDisplayName() + "&7 healed you full HP!"));
                 target.setHealth(target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getDefaultValue());
                 return true;
-            }
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7That player does not exist."));
         }
         return true;
     }

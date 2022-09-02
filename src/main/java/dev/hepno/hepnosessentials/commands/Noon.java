@@ -14,12 +14,16 @@ public class Noon implements CommandExecutor {
 
 
         if (cmd.getName().equalsIgnoreCase("noon")) {
-            Player player = (Player) sender;
-            World world = player.getWorld();
-            world.setTime(6000);
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&lHepnosEssentials &8» &7Set the time to &aNoon in &a" + world.getName()));
+            if (sender instanceof Player) {
+                Player player = (Player) sender;
+                World world = player.getWorld();
+                world.setTime(6000);
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&lHepnosEssentials &8» &7Set the time to &aNoon &7in &a" + world.getName()));
+                return true;
+            }
             return true;
         }
+        sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7This command can not be run via console"));
         return true;
     }
 }

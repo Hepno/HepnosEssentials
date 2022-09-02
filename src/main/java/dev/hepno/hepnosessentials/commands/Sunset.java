@@ -14,12 +14,16 @@ public class Sunset implements CommandExecutor {
 
 
         if (cmd.getName().equalsIgnoreCase("sunset")) {
-            Player player = (Player) sender;
-            World world = player.getWorld();
-            world.setTime(12000);
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&lHepnosEssentials &8» &7Set the time to &aSunset in &a" + world.getName()));
+            if (sender instanceof Player) {
+                Player player = (Player) sender;
+                World world = player.getWorld();
+                world.setTime(12000);
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&d&lHepnosEssentials &8» &7Set the time to &aSunset &7in &a" + world.getName()));
+                return true;
+            }
             return true;
         }
+        sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7This command can not be run via console"));
         return true;
     }
 }
