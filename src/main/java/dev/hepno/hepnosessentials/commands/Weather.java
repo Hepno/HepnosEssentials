@@ -20,21 +20,25 @@ public class Weather implements CommandExecutor {
                 }
                 if (args[0].equalsIgnoreCase("clear")){
                     world.setStorm(false);
+                    world.setThundering(false);
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Set the weather in &a" + world.getName() + "&7 to &aClear"));
                     return true;
                 }
                 if (args[0].equalsIgnoreCase("rain")) {
                     world.setStorm(true);
+                    world.setThundering(false);
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Set the weather in &a" + world.getName() + "&7 to &aRain"));
                     return true;
                 }
                 if (args[0].equalsIgnoreCase("sun")){
                     world.setStorm(false);
+                    world.setThundering(false);
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Set the weather in &a" + world.getName() + "&7 to &aClear"));
                     return true;
                 }
                 if (args[0].equalsIgnoreCase("storm")) {
                     world.setStorm(true);
+                    world.setThundering(true);
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Set the weather in &a" + world.getName() + "&7 to &aStorm"));
                     return true;
                 }

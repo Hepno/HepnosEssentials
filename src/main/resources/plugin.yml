@@ -58,3 +58,6 @@ commands:
   kill:
     description: Kill yourself or another player
     usage: /<command> <player>
+  he:
+    description: Command prefix for HepnosEssentials
+    usage: /he <command>

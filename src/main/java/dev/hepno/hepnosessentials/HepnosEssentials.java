@@ -9,6 +9,17 @@ public final class HepnosEssentials extends JavaPlugin implements CommandExecuto
 
     @Override
     public void onEnable() {
+        RegisterCommands();
+        RegisterEvents();
+
+    }
+
+    @Override
+    public void onDisable() {
+        // Plugin shutdown logic
+    }
+
+    public void RegisterCommands() {
         getCommand("heal").setExecutor(new Heal());
         getCommand("feed").setExecutor(new Feed());
         getCommand("day").setExecutor(new Day());
@@ -28,12 +39,10 @@ public final class HepnosEssentials extends JavaPlugin implements CommandExecuto
         getCommand("gmsp").setExecutor(new Gmsp());
         getCommand("gma").setExecutor(new Gma());
         getCommand("kill").setExecutor(new Kill());
-
-        getServer().getPluginManager().registerEvents(new JoinLeaveListener(), this);
+        getCommand("he").setExecutor(new He());
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+    public void RegisterEvents() {
+        getServer().getPluginManager().registerEvents(new JoinLeaveListener(), this);
     }
 }

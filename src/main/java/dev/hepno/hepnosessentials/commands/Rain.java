@@ -16,6 +16,7 @@ public class Rain implements CommandExecutor {
 
         if (cmd.getName().equalsIgnoreCase("rain")) {
             world.setStorm(true);
+            world.setThundering(false);
             player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Set the weather in &a" + world.getName() + "&7 to &aRain"));
             return true;
         }
