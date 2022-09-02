@@ -8,9 +8,9 @@ HepnosEssentials is a free and open source Spigot plugin aimed at adding essenti
 - /feed Command
 - /kill Command
 - /Reworked join messages
+- /he help command
 
 **To Do List:**
-- /he help command
 - Reworked /give command
 - Reworked /tp command
 - Reworked Chat layout
