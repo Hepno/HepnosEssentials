@@ -23,6 +23,12 @@ public final class HepnosEssentials extends JavaPlugin implements CommandExecuto
         getCommand("weather").setExecutor(new Weather());
         getCommand("sun").setExecutor(new Sun());
         getCommand("rain").setExecutor(new Rain());
+
+        getCommand("gamemode").setExecutor(new Gamemode());
+        getCommand("gmc").setExecutor(new Gmc());
+        getCommand("gms").setExecutor(new Gms());
+        getCommand("gmsp").setExecutor(new Gmsp());
+        getCommand("gma").setExecutor(new Gma());
     }
 
     @Override
