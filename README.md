@@ -9,10 +9,10 @@ HepnosEssentials is a free and open source Spigot plugin aimed at adding essenti
 - /kill Command
 - /Reworked join messages
 - /he help command
+- Reworked /tp command
 
 **To Do List:**
 - Reworked /give command
-- Reworked /tp command
 - Reworked Chat layout
 - Moderation tools (ban, tempban, mute, tempmute, kick, warn, etc)
 - Permission Nodes to prevent random people from using admin commands [Please do not use this plugin until this is finished]
@@ -29,5 +29,7 @@ HepnosEssentials is a free and open source Spigot plugin aimed at adding essenti
 1.1: Added Weather rework, fixed bugs that caused internal errors when specifying a player that doesnt exist & running a command in console
 
 1.2: Added /gamemode (/gmc, /gms, /gma, /gmsp as well), added /kill, added reworked Join & Leave messages
+
+1.3: Added /tp command
 
 **Download:** As the plugin is not anywhere near finished there is no download available (yet). Feel free to compile the plugin yourself if you'd like to try it.

@@ -1,6 +1,7 @@
 package dev.hepno.hepnosessentials;
 
 import dev.hepno.hepnosessentials.commands.*;
+import dev.hepno.hepnosessentials.listeners.ChatListener;
 import dev.hepno.hepnosessentials.listeners.JoinLeaveListener;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -40,9 +41,11 @@ public final class HepnosEssentials extends JavaPlugin implements CommandExecuto
         getCommand("gma").setExecutor(new Gma());
         getCommand("kill").setExecutor(new Kill());
         getCommand("he").setExecutor(new He());
+        getCommand("tp").setExecutor(new Teleport());
     }
 
     public void RegisterEvents() {
         getServer().getPluginManager().registerEvents(new JoinLeaveListener(), this);
+        getServer().getPluginManager().registerEvents(new ChatListener(), this);
     }
 }
