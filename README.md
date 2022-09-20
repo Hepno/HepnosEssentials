@@ -32,4 +32,6 @@ HepnosEssentials is a free and open source Spigot plugin aimed at adding essenti
 
 1.3: Added /tp command
 
+1.4: Added /explode, /lightning, /fire commands, fixed /heal command, fixed /tp commmand bugs
+
 **Download:** As the plugin is not anywhere near finished there is no download available (yet). Feel free to compile the plugin yourself if you'd like to try it.
