@@ -21,8 +21,7 @@ public final class HepnosEssentials extends JavaPlugin implements CommandExecuto
     }
 
     public void RegisterCommands() {
-        getCommand("heal").setExecutor(new Heal());
-        getCommand("feed").setExecutor(new Feed());
+        // Vanilla reworks
         getCommand("day").setExecutor(new Day());
         getCommand("time").setExecutor(new Time());
         getCommand("day").setExecutor(new Day());
@@ -40,8 +39,19 @@ public final class HepnosEssentials extends JavaPlugin implements CommandExecuto
         getCommand("gmsp").setExecutor(new Gmsp());
         getCommand("gma").setExecutor(new Gma());
         getCommand("kill").setExecutor(new Kill());
-        getCommand("he").setExecutor(new He());
         getCommand("tp").setExecutor(new Teleport());
+
+        // Useful commands
+        getCommand("heal").setExecutor(new Heal());
+        getCommand("feed").setExecutor(new Feed());
+
+        // Fun commands
+        getCommand("fire").setExecutor(new Fire());
+        getCommand("lightning").setExecutor(new Lightning());
+        getCommand("explode").setExecutor(new Explode());
+
+        // Other
+        getCommand("he").setExecutor(new He());
     }
 
     public void RegisterEvents() {

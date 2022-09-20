@@ -15,15 +15,18 @@ public class Teleport implements CommandExecutor {
             if (args.length == 0){
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Invalid arguments! Please mention a player to teleport to"));
                 return true;
-            }else if (args.length == 1) {
+            }
+            else if (args.length == 1) {
                 Player target = Bukkit.getPlayer(args[0]);
-                if (!(target instanceof Player)) {return true;}
-                player.teleport(target.getLocation());
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Teleported &dyou&7 to &d" + target.getName()));
-                target.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &d" + player.getName() + " &7has teleported to &dyou"));
-            }else if(args.length == 2){
+                if (!(player instanceof Player)) {player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7That player does not exist.")); return true; }
+                if (!(target instanceof Player)) {player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7That player does not exist.")); return true; }
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Invalid arguments! Please mention a second player"));
+            }
+            else if(args.length == 2){
                 Player playerSent = Bukkit.getPlayer(args[0]);
                 Player target = Bukkit.getPlayer(args[1]);
+                if (!(playerSent instanceof Player)) {player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7That player does not exist.")); return true; }
+                if (!(target instanceof Player)) {player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7That player does not exist.")); return true; }
                 playerSent.teleport(target.getLocation());
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &dYou &7have been teleported to &d" + target.getName()));
                 target.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &d" + player.getName() + " &7has teleported to &dyou"));

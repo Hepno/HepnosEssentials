@@ -61,3 +61,16 @@ commands:
   he:
     description: Command prefix for HepnosEssentials
     usage: /he <command>
+  tp:
+    description: Teleport
+    usage: /tp <player> <player>
+  lightning:
+    description: Strikes a player with lightning
+    usage: /<command> <player>
+    aliases: [strike, smite]
+  explode:
+    description: Explode a player
+    usage: /<command> <player>
+  fire:
+    description: Light a player on fire
+    usage: /<command> <player>
