@@ -12,6 +12,10 @@ public class Sunset implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
+        if (!(sender.hasPermission("he.sunset"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
 
         if (cmd.getName().equalsIgnoreCase("sunset")) {
             if (sender instanceof Player) {

@@ -14,6 +14,11 @@ public class Sun implements CommandExecutor {
         Player player = (Player) sender;
         World world = player.getWorld();
 
+        if (!(sender.hasPermission("he.sun"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
+
         if (cmd.getName().equalsIgnoreCase("sun")) {
             world.setStorm(false);
             player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Set the weather in &a" + world.getName() + "&7 to &aClear"));

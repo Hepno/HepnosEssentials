@@ -11,6 +11,12 @@ public class Kill implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        if (!(sender.hasPermission("he.kill"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
+
         if (cmd.getName().equalsIgnoreCase("kill")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;

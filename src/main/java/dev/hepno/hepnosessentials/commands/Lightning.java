@@ -12,6 +12,12 @@ import org.bukkit.entity.Player;
 public class Lightning implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        if(!(sender.hasPermission("he.lightning"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
+
         if (!(sender instanceof Player)) { return true; }
         Player player = (Player) sender;
         if (args.length == 0) {

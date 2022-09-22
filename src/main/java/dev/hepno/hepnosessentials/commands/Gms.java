@@ -11,6 +11,12 @@ import org.bukkit.entity.Player;
 public class Gms implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        if (!(sender.hasPermission("he.gamemode.survival"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
+
         if (cmd.getName().equalsIgnoreCase("gms")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;

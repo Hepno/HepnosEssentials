@@ -10,6 +10,12 @@ import org.bukkit.entity.Player;
 public class Teleport implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        if (!(sender.hasPermission("he.teleport"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
+
         if (sender instanceof Player) {
             Player player = (Player) sender;
             if (args.length == 0){
@@ -17,6 +23,7 @@ public class Teleport implements CommandExecutor {
                 return true;
             }
             else if (args.length == 1) {
+
                 Player target = Bukkit.getPlayer(args[0]);
                 if (!(player instanceof Player)) {player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7That player does not exist.")); return true; }
                 if (!(target instanceof Player)) {player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7That player does not exist.")); return true; }

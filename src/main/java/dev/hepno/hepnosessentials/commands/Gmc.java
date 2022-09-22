@@ -11,6 +11,12 @@ import org.bukkit.entity.Player;
 public class Gmc implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        if (!(sender.hasPermission("he.gamemode.creative"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
+
         if (cmd.getName().equalsIgnoreCase("gmc")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;

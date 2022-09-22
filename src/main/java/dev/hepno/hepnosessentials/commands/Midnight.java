@@ -14,6 +14,12 @@ public class Midnight implements CommandExecutor {
 
 
         if (cmd.getName().equalsIgnoreCase("midnight")) {
+
+            if (!(sender.hasPermission("he.midnight"))) {
+                sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+                return true;
+            }
+
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 World world = player.getWorld();

@@ -12,6 +12,10 @@ public class Night implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
+        if (!(sender.hasPermission("he.night"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
 
         if (cmd.getName().equalsIgnoreCase("night")) {
             if (sender instanceof Player) {

@@ -13,6 +13,11 @@ public class Day implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
 
+        if (!(sender.hasPermission("he.day"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
+
         if (cmd.getName().equalsIgnoreCase("day")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;

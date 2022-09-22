@@ -11,6 +11,12 @@ public class Rain implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        if (!(sender.hasPermission("he.rain"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
+
         Player player = (Player) sender;
         World world = player.getWorld();
 

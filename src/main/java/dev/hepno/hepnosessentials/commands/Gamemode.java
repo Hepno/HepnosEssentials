@@ -11,6 +11,12 @@ import org.bukkit.entity.Player;
 public class Gamemode implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        if(!(sender.hasPermission("he.gamemode"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
+
         if (cmd.getName().equalsIgnoreCase("gamemode")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
@@ -18,6 +24,10 @@ public class Gamemode implements CommandExecutor {
                 //      /Gamemode Survival
                 if (args.length == 0) { player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Invalid arguments")); return true; }
                 if (args[0].equalsIgnoreCase("survival")) {
+                    if (!(sender.hasPermission("he.gamemode.survival"))) {
+                        sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+                        return true;
+                    }
                     if (args.length == 1) {
                         player.setGameMode(GameMode.SURVIVAL);
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Set your game mode to &aSurvival"));
@@ -32,6 +42,10 @@ public class Gamemode implements CommandExecutor {
                 //      /Gamemode Creative
                 if (args.length == 0) { player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Invalid arguments")); return true; }
                 if (args[0].equalsIgnoreCase("creative")) {
+                    if (!(sender.hasPermission("he.gamemode.creative"))) {
+                        sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+                        return true;
+                    }
                     if (args.length == 1) {
                         player.setGameMode(GameMode.CREATIVE);
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Set your game mode to &aCreative"));
@@ -46,6 +60,10 @@ public class Gamemode implements CommandExecutor {
                 //      /Gamemode Spectator
                 if (args.length == 0) { player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Invalid arguments")); return true; }
                 if (args[0].equalsIgnoreCase("spectator")) {
+                    if (!(sender.hasPermission("he.gamemode.spectator"))) {
+                        sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+                        return true;
+                    }
                     if (args.length == 1) {
                         player.setGameMode(GameMode.SPECTATOR);
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Set your game mode to &aSpectator"));
@@ -60,6 +78,10 @@ public class Gamemode implements CommandExecutor {
                 //      /Gamemode Adventure
                 if (args.length == 0) { player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Invalid arguments")); return true; }
                 if (args[0].equalsIgnoreCase("adventure")) {
+                    if (!(sender.hasPermission("he.gamemode.adventure"))) {
+                        sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+                        return true;
+                    }
                     if (args.length == 1) {
                         player.setGameMode(GameMode.ADVENTURE);
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&d&lHepnosEssentials &8» &7Set your game mode to &aAdventure"));

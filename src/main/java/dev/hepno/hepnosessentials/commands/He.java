@@ -9,6 +9,12 @@ import org.bukkit.entity.Player;
 public class He implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        if (!(sender.hasPermission("he"))) {
+            sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+            return true;
+        }
+
         if (cmd.getName().equalsIgnoreCase("he")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
@@ -19,6 +25,12 @@ public class He implements CommandExecutor {
                 }
 
                 if (args[0].equalsIgnoreCase("help")) {
+
+                    if (!(sender.hasPermission("he.help"))) {
+                        sender.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+                        return true;
+                    }
+
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&7&m                                  "));
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&dHepnosEssentials Help:"));
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&7&m                                  "));
