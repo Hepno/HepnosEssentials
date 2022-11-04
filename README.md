@@ -36,4 +36,4 @@ HepnosEssentials is a free and open source Spigot plugin aimed at adding essenti
 
 1.5: Added permissions
 
-**Download:** As the plugin is not anywhere near finished there is no download available (yet). Feel free to compile the plugin yourself if you'd like to try it.
+**Download:** The download is coming soon onto SpigotMC once I've finished a few more features, feel free to compile the plugin yourself.
